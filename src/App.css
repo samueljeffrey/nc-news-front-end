@@ -2,37 +2,81 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.react-link {
+  text-decoration-line: none;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover,
+.article-card:hover {
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Header */
+
+h1 {
+  color: red;
+  font-size: 5em;
+}
+
+#user-button {
+  padding: 8px 16px;
+  background-color: black;
   color: white;
+  border-radius: 5px;
+  margin: 5px;
+  border: none;
+  font-size: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.header-topic-button {
+  padding: 5px 10px;
+  min-width: 80px;
+  background-color: red;
+  color: white;
+  border: black solid 2px;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ArticleList */
+
+#article-list {
+  width: 90vw;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#article-list-title {
+  text-transform: capitalize;
+}
+
+.article-card {
+  border: red 2px solid;
+  border-radius: 10px;
+  width: 360px;
+  height: 180px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.article-card > h3 {
+  font-size: 1.25rem;
+  height: 80px;
+  margin: 10px 0;
+}
+
+.article-card > p {
+  margin: 10px;
+}
+
+.positive-article-votes {
+  color: green;
+}
+
+.negative-article-votes {
+  color: red;
 }

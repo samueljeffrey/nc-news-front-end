@@ -27,3 +27,15 @@ export const getUsers = () => {
     return response.data.users;
   });
 };
+
+export const getSingleArticle = (id) => {
+  return api.get(`/articles/${id}`).then((response) => {
+    return response.data.article;
+  });
+};
+
+export const getComments = (id) => {
+  return api.get(`/articles/${id}/comments`).then((response) => {
+    return response.data.comments;
+  });
+};

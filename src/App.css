@@ -28,23 +28,33 @@ h1 {
   background-color: black;
   color: white;
   border-radius: 5px;
-  margin: 5px;
+  margin: 5px 5px 15px;
   border: none;
   font-size: 1rem;
+  font-weight: 500;
 }
 
 .header-topic-button {
   padding: 5px 10px;
-  min-width: 80px;
+  min-width: 100px;
   background-color: red;
   color: white;
   border: black solid 2px;
   border-radius: 5px;
-  margin: 10px;
+  margin: 20px 10px;
   font-size: 1rem;
+  font-weight: 500;
 }
 
 /* ArticleList */
+
+#articleListSelect {
+  background-color: white;
+  padding: 5px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 2px black solid;
+}
 
 #article-list {
   width: 90vw;
@@ -81,11 +91,11 @@ h1 {
   margin: 10px;
 }
 
-.positive-article-votes {
+.positive-votes {
   color: green;
 }
 
-.negative-article-votes {
+.negative-votes {
   color: red;
 }
 
@@ -117,4 +127,57 @@ h1 {
 .current-user {
   padding: 16px;
   border: solid 4px green;
+}
+
+/* ArticlePage */
+
+.article-page {
+  padding: 25px;
+}
+
+.article-page-main {
+  max-width: 1000px;
+  border-radius: 20px;
+  border: 2px red solid;
+  margin: 20px auto;
+  padding: 20px 30px 40px;
+}
+
+.article-page-title {
+  font-size: 2rem;
+  margin: 40px auto 0;
+}
+
+.article-body {
+  margin: 40px auto;
+  font-size: 1.25rem;
+  padding: 0 40px;
+  text-align: justify;
+}
+
+.line-before-comments {
+  width: 20vw;
+  border: 1px black solid;
+  margin: 40px auto;
+}
+
+.comments-statement {
+  cursor: pointer;
+  border: black 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  width: 160px;
+  margin: auto;
+}
+
+.comment-in-article {
+  max-width: 600px;
+  margin: 25px auto;
+  border: black 1px solid;
+  border-radius: 10px;
+}
+
+.comment-body-in-article {
+  padding: 10px 50px;
+  text-align: left;
 }

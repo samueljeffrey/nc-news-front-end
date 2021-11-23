@@ -54,16 +54,12 @@ export default function ArticleList({ topic }) {
                 {article.votes < 0 ? (
                   <p>
                     Votes:{" "}
-                    <strong className="negative-article-votes">
-                      {article.votes}
-                    </strong>
+                    <strong className="negative-votes">{article.votes}</strong>
                   </p>
                 ) : (
                   <p>
                     Votes:{" "}
-                    <strong className="positive-article-votes">
-                      {article.votes}
-                    </strong>
+                    <strong className="positive-votes">{article.votes}</strong>
                   </p>
                 )}
               </div>

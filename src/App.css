@@ -12,6 +12,10 @@ button:hover,
   cursor: pointer;
 }
 
+h2 {
+  margin: 50px auto;
+}
+
 /* Header */
 
 h1 {
@@ -57,10 +61,14 @@ h1 {
 .article-card {
   border: red 2px solid;
   border-radius: 10px;
-  width: 360px;
-  height: 180px;
+  max-width: 360px;
+  min-height: 180px;
   margin: 20px;
   padding: 20px;
+}
+
+.article-card:hover {
+  border: black 2px solid;
 }
 
 .article-card > h3 {
@@ -79,4 +87,34 @@ h1 {
 
 .negative-article-votes {
   color: red;
+}
+
+/* ChooseUser */
+
+#choose-user-div {
+  width: 60vw;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-option {
+  font-size: 2rem;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+}
+
+.user-option:hover {
+  border: solid 4px red;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.current-user {
+  padding: 16px;
+  border: solid 4px green;
 }

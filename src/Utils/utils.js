@@ -22,6 +22,8 @@ export const getArticles = (topic, sort, order) => {
   });
 };
 
-export const getComments = (id) => {
-  return;
+export const getUsers = () => {
+  return api.get("/users").then((response) => {
+    return response.data.users;
+  });
 };

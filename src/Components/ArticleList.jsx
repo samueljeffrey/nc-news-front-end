@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getArticles, getComments } from "../Utils/utils.js";
+import { getArticles } from "../Utils/utils.js";
 
 export default function ArticleList({ topic }) {
   const [articles, setArticles] = useState([]);
@@ -18,6 +18,7 @@ export default function ArticleList({ topic }) {
   }, [topic, sort, order]);
   return (
     <main>
+      <h2 id="article-list-title">{topic.slug} articles:</h2>
       <select
         id="articleListSelect"
         onChange={() => {
@@ -35,19 +36,17 @@ export default function ArticleList({ topic }) {
         <option value="author ASC">Author A-Z</option>
         <option value="author DESC">Author Z-A</option>
       </select>
-      <h2 id="article-list-title">{topic.slug} articles:</h2>
       <div id="article-list">
         {articles.map((article) => {
-          const commentsForThis = getComments(article.article_id);
           return (
             <Link className="react-link" to={`/articles/${article.article_id}`}>
               <div className="article-card">
                 <h3>{article.title}</h3>
                 <p>
-                  Written by: <i>{article.author}</i>
+                  Written by <i>{article.author}</i>
                 </p>
                 <p>
-                  Posted: {article.created_at.slice(8, 10)}/
+                  Posted on {article.created_at.slice(8, 10)}/
                   {article.created_at.slice(5, 7)}/
                   {article.created_at.slice(0, 4)} at{" "}
                   {article.created_at.slice(11, 16)}

@@ -29,8 +29,8 @@ function App() {
           <Header topic={topic} setTopic={setTopic} allTopics={allTopics} />
           <Routes>
             <Route path="/" element={<ArticleList topic={topic} />} />
-            {/* <Route path="/articles/:article_id" element={<ArticlePage />} />
             <Route path="/users" element={<ChooseUser />} />
+            {/* <Route path="/articles/:article_id" element={<ArticlePage />} />
             <Route
               path="/articles/:article_id/comment"
               element={<PostComment />}

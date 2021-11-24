@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
 .react-link {
@@ -13,7 +14,7 @@ button:hover,
 }
 
 h2 {
-  margin: 50px auto;
+  margin: 25px auto;
 }
 
 /* Header */
@@ -21,6 +22,7 @@ h2 {
 h1 {
   color: red;
   font-size: 5em;
+  margin: 15px;
 }
 
 #user-button {
@@ -48,12 +50,16 @@ h1 {
 
 /* ArticleList */
 
-#articleListSelect {
+#article-list-select {
   background-color: white;
   padding: 5px;
   font-size: 1.2rem;
   border-radius: 5px;
   border: 2px black solid;
+}
+
+#article-list-select:hover {
+  cursor: pointer;
 }
 
 #article-list {
@@ -74,7 +80,7 @@ h1 {
   max-width: 360px;
   min-height: 180px;
   margin: 20px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .article-card:hover {
@@ -109,16 +115,18 @@ h1 {
   justify-content: center;
 }
 
-.user-option {
+/* UserCard */
+
+.user-card-div {
   font-size: 2rem;
-  width: 300px;
-  padding: 20px;
+  min-width: 300px;
+  padding: 16px;
   border-radius: 10px;
-  border: none;
+  border: solid black 4px;
   margin: 10px;
 }
 
-.user-option:hover {
+.user-card-div:hover {
   border: solid 4px red;
   padding: 16px;
   cursor: pointer;
@@ -127,6 +135,21 @@ h1 {
 .current-user {
   padding: 16px;
   border: solid 4px green;
+}
+
+.current-user:hover {
+  padding: 16px;
+  border: solid 4px green;
+}
+
+.img-user-card {
+  height: 100px;
+}
+
+.user-card-name {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 20px 0 0;
 }
 
 /* ArticlePage */
@@ -161,6 +184,22 @@ h1 {
   margin: 40px auto;
 }
 
+.vote-button {
+  margin: 0 5px;
+  width: 30px;
+  height: 30px;
+  border: solid black 1px;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  color: white;
+  background-color: black;
+}
+
+.vote-button:hover {
+  background-color: white;
+  color: black;
+}
+
 .comments-statement {
   cursor: pointer;
   border: black 1px solid;
@@ -169,6 +208,13 @@ h1 {
   width: 160px;
   margin: auto;
 }
+
+.comments-statement:hover {
+  background-color: black;
+  color: white;
+}
+
+/* CommentCard */
 
 .comment-in-article {
   max-width: 600px;
@@ -180,4 +226,45 @@ h1 {
 .comment-body-in-article {
   padding: 10px 50px;
   text-align: left;
+}
+
+.delete-comment-button {
+  margin: 0 0 10px;
+  padding: 4px 8px;
+  border: solid red 1px;
+  border-radius: 5px;
+  color: red;
+  background-color: white;
+}
+
+.delete-comment-button:hover {
+  background-color: red;
+  color: white;
+}
+
+.do-delete-comment {
+  border: solid black 2px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 4px 8px;
+  margin: 0 10px 10px;
+  color: red;
+}
+
+.do-delete-comment:hover {
+  color: white;
+  background-color: red;
+}
+
+.dont-delete-comment {
+  border: solid black 2px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 4px 8px;
+  margin: 0 10px 10px;
+}
+
+.dont-delete-comment:hover {
+  background-color: black;
+  color: white;
 }

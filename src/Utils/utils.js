@@ -39,3 +39,26 @@ export const getComments = (id) => {
     return response.data.comments;
   });
 };
+
+export const voteOnArticle = (id, vote) => {
+  return api.patch(`/articles/${id}`, { inc_votes: vote }).then((response) => {
+    return response.data.article;
+  });
+};
+
+export const deleteComment = (id) => {
+  return api
+    .delete(`/comments/${id}`)
+    .then(() => {
+      return "done";
+    })
+    .catch(() => {
+      return "not done";
+    });
+};
+
+export const getSingleUser = (username) => {
+  return api.get(`/users/${username}`).then((response) => {
+    return response.data.user;
+  });
+};

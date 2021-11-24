@@ -9,7 +9,7 @@ export default function ArticleList({ topic }) {
   useEffect(() => {
     setSort("created_at");
     setOrder("DESC");
-    document.getElementById("articleListSelect").value = "created_at DESC";
+    document.getElementById("article-list-select").value = "created_at DESC";
   }, [topic]);
   useEffect(() => {
     getArticles(topic.slug, sort, order).then((response) => {
@@ -20,10 +20,10 @@ export default function ArticleList({ topic }) {
     <main>
       <h2 id="article-list-title">{topic.slug} articles:</h2>
       <select
-        id="articleListSelect"
+        id="article-list-select"
         onChange={() => {
           const values = document
-            .getElementById("articleListSelect")
+            .getElementById("article-list-select")
             .value.split(" ");
           setSort(values[0]);
           setOrder(values[1]);
@@ -33,6 +33,8 @@ export default function ArticleList({ topic }) {
         <option value="created_at ASC">Oldest</option>
         <option value="votes DESC">Most votes</option>
         <option value="votes ASC">Least votes</option>
+        <option value="comment_count DESC">Most comments</option>
+        <option value="comment_count ASC">Least comments</option>
         <option value="author ASC">Author A-Z</option>
         <option value="author DESC">Author Z-A</option>
       </select>
@@ -62,6 +64,9 @@ export default function ArticleList({ topic }) {
                     <strong className="positive-votes">{article.votes}</strong>
                   </p>
                 )}
+                <p className="article-card-comments">
+                  Comments: {article.comment_count}
+                </p>
               </div>
             </Link>
           );

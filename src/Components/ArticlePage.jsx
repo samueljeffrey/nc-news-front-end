@@ -3,12 +3,14 @@ import { useEffect, useState, useContext } from "react";
 import { getSingleArticle, getComments, voteOnArticle } from "../Utils/utils";
 import { userContext } from "../Contexts/user.js";
 import CommentCard from "./CommentCard.jsx";
+import PostComment from "./PostComment.jsx";
 
 export default function ArticlePage() {
   const { article_id } = useParams();
   const [article, setArticle] = useState({});
   const [comments, setComments] = useState([]);
-  const [clicked, setClicked] = useState(false);
+  const [showClicked, setShowClicked] = useState(false);
+  const [addClicked, setAddClicked] = useState(false);
   const { user } = useContext(userContext);
 
   useEffect(() => {
@@ -66,20 +68,36 @@ export default function ArticlePage() {
           )}
           <hr className="line-before-comments" />
           <p
+            className="comment-on-article"
+            onClick={() => {
+              setAddClicked(true);
+            }}
+          >
+            Add comment
+          </p>
+          {addClicked ? (
+            <PostComment
+              article={article}
+              setComments={setComments}
+              user={user}
+              setAddClicked={setAddClicked}
+            />
+          ) : null}
+          <p
             className="comments-statement"
             onClick={() => {
-              if (clicked === false) {
-                setClicked(true);
+              if (showClicked === false) {
+                setShowClicked(true);
               } else {
-                setClicked(false);
+                setShowClicked(false);
               }
             }}
           >
-            {clicked
+            {showClicked
               ? `Hide ${comments.length} comments`
               : `Show ${comments.length} comments`}
           </p>
-          {clicked ? (
+          {showClicked ? (
             <div className="comments-for-article">
               {comments.map((comment) => {
                 return (

@@ -52,8 +52,8 @@ export const deleteComment = (id) => {
     .then(() => {
       return "done";
     })
-    .catch(() => {
-      return "not done";
+    .catch((err) => {
+      return err;
     });
 };
 
@@ -61,4 +61,15 @@ export const getSingleUser = (username) => {
   return api.get(`/users/${username}`).then((response) => {
     return response.data.user;
   });
+};
+
+export const postComment = (id, username, body) => {
+  return api
+    .post(`/articles/${id}/comments`, { username, body })
+    .then(() => {
+      return "done";
+    })
+    .catch((err) => {
+      return err;
+    });
 };

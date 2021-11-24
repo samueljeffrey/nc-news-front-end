@@ -7,7 +7,6 @@ import Header from "./Components/Header.jsx";
 import ArticleList from "./Components/ArticleList.jsx";
 import ArticlePage from "./Components/ArticlePage.jsx";
 import ChooseUser from "./Components/ChooseUser.jsx";
-import PostComment from "./Components/PostComment.jsx";
 
 function App() {
   const [user, setUser] = useState({ username: "grumpy19" });

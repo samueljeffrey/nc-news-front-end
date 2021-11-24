@@ -1,5 +1,5 @@
 import { deleteComment } from "../Utils/utils.js";
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState } from "react";
 import { userContext } from "../Contexts/user.js";
 
 export default function CommentCard({ comment, setComments }) {

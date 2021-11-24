@@ -8,8 +8,8 @@
   color: black;
 }
 
-button:hover,
-.article-card:hover {
+button:hover {
+  transition-duration: 0.25s;
   cursor: pointer;
 }
 
@@ -31,9 +31,16 @@ h1 {
   color: white;
   border-radius: 5px;
   margin: 5px 5px 15px;
-  border: none;
+  border: 2px solid white;
   font-size: 1rem;
   font-weight: 500;
+}
+
+#user-button:hover {
+  transition-duration: 0.25s;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
 }
 
 .header-topic-button {
@@ -48,6 +55,12 @@ h1 {
   font-weight: 500;
 }
 
+.header-topic-button:hover {
+  transition-duration: 0.25s;
+  background-color: white;
+  color: red;
+}
+
 /* ArticleList */
 
 #article-list-select {
@@ -59,6 +72,7 @@ h1 {
 }
 
 #article-list-select:hover {
+  transition-duration: 0.25s;
   cursor: pointer;
 }
 
@@ -75,7 +89,7 @@ h1 {
 }
 
 .article-card {
-  border: red 2px solid;
+  border: red 4px solid;
   border-radius: 10px;
   max-width: 360px;
   min-height: 180px;
@@ -84,7 +98,9 @@ h1 {
 }
 
 .article-card:hover {
-  border: black 2px solid;
+  transition-duration: 0.25s;
+  border: black 4px solid;
+  cursor: pointer;
 }
 
 .article-card > h3 {
@@ -119,27 +135,28 @@ h1 {
 
 .user-card-div {
   font-size: 2rem;
-  min-width: 300px;
+  min-width: 280px;
   padding: 16px;
   border-radius: 10px;
-  border: solid black 4px;
-  margin: 10px;
+  border: solid black 8px;
+  margin: 12px;
 }
 
 .user-card-div:hover {
-  border: solid 4px red;
+  transition-duration: 0.25s;
+  border: solid 8px red;
   padding: 16px;
   cursor: pointer;
 }
 
 .current-user {
   padding: 16px;
-  border: solid 4px green;
+  border: solid 8px lime;
 }
 
 .current-user:hover {
   padding: 16px;
-  border: solid 4px green;
+  border: solid 8px lime;
 }
 
 .img-user-card {
@@ -196,20 +213,82 @@ h1 {
 }
 
 .vote-button:hover {
+  transition-duration: 0.25s;
   background-color: white;
   color: black;
 }
 
-.comments-statement {
+.comment-on-article {
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  border: solid 1px black;
+  padding: 5px;
+  width: 160px;
+  margin: 0 auto 10px;
+}
+
+.comment-on-article:hover {
+  transition-duration: 0.25s;
   cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  width: 160px;
+}
+
+.comments-statement {
   border: black 1px solid;
   border-radius: 5px;
   padding: 5px;
   width: 160px;
-  margin: auto;
+  margin: 20px auto 0;
 }
 
 .comments-statement:hover {
+  transition-duration: 0.25s;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/* PostComment */
+
+#new-comment {
+  width: 300px;
+  margin: auto;
+  border: black solid 2px;
+  border-radius: 5px;
+}
+
+.post-comment {
+  padding: 4px 8px;
+  margin: 5px;
+  border: solid green 1px;
+  border-radius: 5px;
+  color: green;
+  background-color: white;
+}
+
+.post-comment:hover {
+  cursor: pointer;
+  transition-duration: 0.25s;
+  background-color: green;
+  color: white;
+}
+
+.cancel-comment {
+  padding: 4px 8px;
+  margin: 5px;
+  border: solid black 1px;
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+}
+
+.cancel-comment:hover {
+  cursor: pointer;
+  transition-duration: 0.25s;
   background-color: black;
   color: white;
 }
@@ -238,6 +317,7 @@ h1 {
 }
 
 .delete-comment-button:hover {
+  transition-duration: 0.25s;
   background-color: red;
   color: white;
 }
@@ -252,6 +332,7 @@ h1 {
 }
 
 .do-delete-comment:hover {
+  transition-duration: 0.25s;
   color: white;
   background-color: red;
 }
@@ -265,6 +346,7 @@ h1 {
 }
 
 .dont-delete-comment:hover {
+  transition-duration: 0.25s;
   background-color: black;
   color: white;
 }

@@ -90,3 +90,14 @@ export const postArticle = (title, body, topic, username) => {
       return err;
     });
 };
+
+export const deleteArticle = (id) => {
+  return api
+    .delete(`/articles/${id}`)
+    .then(() => {
+      return "done";
+    })
+    .catch((err) => {
+      return err;
+    });
+};

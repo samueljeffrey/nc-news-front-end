@@ -1,6 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
-import { getSingleArticle, getComments, voteOnArticle } from "../Utils/utils";
+import {
+  getSingleArticle,
+  getComments,
+  voteOnArticle,
+  deleteArticle,
+} from "../Utils/utils";
 import { userContext } from "../Contexts/user.js";
 import CommentCard from "./CommentCard.jsx";
 import PostComment from "./PostComment.jsx";
@@ -11,6 +16,8 @@ export default function ArticlePage() {
   const [comments, setComments] = useState([]);
   const [showClicked, setShowClicked] = useState(false);
   const [addClicked, setAddClicked] = useState(false);
+  const [deleteClicked, setDeleteClicked] = useState(false);
+  const [deleted, setDeleted] = useState(false);
   const { user } = useContext(userContext);
 
   useEffect(() => {
@@ -20,8 +27,8 @@ export default function ArticlePage() {
     getComments(article_id).then((response) => {
       setComments(response);
     });
-  }, [comments]);
-  if (Object.keys(article).length > 0) {
+  }, []);
+  if (!deleted && Object.keys(article).length > 0) {
     return (
       <main className="article-page">
         <div className="article-page-main">
@@ -42,7 +49,44 @@ export default function ArticlePage() {
               Votes: <strong className="positive-votes">{article.votes}</strong>
             </p>
           )}
-          {article.author === user.username ? null : (
+          {article.author === user.username ? (
+            deleteClicked ? (
+              <div>
+                <h3>Delete article?</h3>
+                <button
+                  className="do-delete-article"
+                  onClick={() => {
+                    deleteArticle(article.article_id).then((response) => {
+                      if (response === "done") {
+                        setDeleted(true);
+                      } else {
+                        console.log(response);
+                      }
+                    });
+                  }}
+                >
+                  Yes
+                </button>
+                <button
+                  className="dont-delete-article"
+                  onClick={() => {
+                    setDeleteClicked(false);
+                  }}
+                >
+                  No
+                </button>
+              </div>
+            ) : (
+              <button
+                className="delete-article-button"
+                onClick={() => {
+                  setDeleteClicked(true);
+                }}
+              >
+                Delete
+              </button>
+            )
+          ) : (
             <div className="vote-button-div">
               <button
                 className="vote-button"
@@ -125,6 +169,6 @@ export default function ArticlePage() {
       </main>
     );
   } else {
-    return <h2>Empty</h2>;
+    return <h2>Article deleted</h2>;
   }
 }

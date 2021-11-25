@@ -63,9 +63,15 @@ export default function CommentCard({ thisComment, setComments }) {
           <button
             className="vote-button comment-vote-button"
             onClick={() => {
-              voteOnComment(comment.comment_id, 1).then((response) => {
-                setComment(response);
-              });
+              const newComment = { ...comment };
+              newComment.votes++;
+              setComment(newComment);
+              voteOnComment(comment.comment_id, 1)
+                .then((response) => {})
+                .catch(() => {
+                  newComment.votes--;
+                  setComment(newComment);
+                });
             }}
           >
             +
@@ -73,9 +79,15 @@ export default function CommentCard({ thisComment, setComments }) {
           <button
             className="vote-button comment-vote-button"
             onClick={() => {
-              voteOnComment(comment.comment_id, -1).then((response) => {
-                setComment(response);
-              });
+              const updatedComment = { ...comment };
+              updatedComment.votes--;
+              setComment(updatedComment);
+              voteOnComment(comment.comment_id, -1)
+                .then((response) => {})
+                .catch(() => {
+                  updatedComment.votes++;
+                  setComment(updatedComment);
+                });
             }}
           >
             -

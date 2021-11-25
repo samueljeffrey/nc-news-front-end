@@ -47,9 +47,15 @@ export default function ArticlePage() {
               <button
                 className="vote-button"
                 onClick={() => {
-                  voteOnArticle(article_id, 1).then((response) => {
-                    setArticle(response);
-                  });
+                  const updatedArticle = { ...article };
+                  updatedArticle.votes++;
+                  setArticle(updatedArticle);
+                  voteOnArticle(article_id, 1)
+                    .then((response) => {})
+                    .catch(() => {
+                      updatedArticle.votes--;
+                      setArticle(updatedArticle);
+                    });
                 }}
               >
                 +
@@ -57,9 +63,15 @@ export default function ArticlePage() {
               <button
                 className="vote-button"
                 onClick={() => {
-                  voteOnArticle(article_id, -1).then((response) => {
-                    setArticle(response);
-                  });
+                  const updatedArticle = { ...article };
+                  updatedArticle.votes--;
+                  setArticle(updatedArticle);
+                  voteOnArticle(article_id, -1)
+                    .then((response) => {})
+                    .catch(() => {
+                      updatedArticle.votes++;
+                      setArticle(updatedArticle);
+                    });
                 }}
               >
                 -

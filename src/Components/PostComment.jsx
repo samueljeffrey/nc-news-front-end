@@ -14,7 +14,6 @@ export default function PostComment({
         <span
           className="post-comment"
           onClick={() => {
-            console.log(document.getElementById("new-comment").value);
             if (document.getElementById("new-comment").value !== "") {
               postComment(
                 article.article_id,

@@ -79,3 +79,14 @@ export const voteOnComment = (id, vote) => {
     return response.data.comment;
   });
 };
+
+export const postArticle = (title, body, topic, username) => {
+  return api
+    .post(`/articles`, { title, body, topic, username })
+    .then((response) => {
+      return response.data.article;
+    })
+    .catch((err) => {
+      return err;
+    });
+};

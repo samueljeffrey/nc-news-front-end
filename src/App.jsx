@@ -7,6 +7,7 @@ import Header from "./Components/Header.jsx";
 import ArticleList from "./Components/ArticleList.jsx";
 import ArticlePage from "./Components/ArticlePage.jsx";
 import ChooseUser from "./Components/ChooseUser.jsx";
+import PostArticle from "./Components/PostArticle.jsx";
 
 function App() {
   const [user, setUser] = useState({ username: "grumpy19" });
@@ -30,10 +31,7 @@ function App() {
             <Route path="/" element={<ArticleList topic={topic} />} />
             <Route path="/users" element={<ChooseUser />} />
             <Route path="/articles/:article_id" element={<ArticlePage />} />
-            {/* <Route
-              path="/articles/:article_id/comment"
-              element={<PostComment />}
-            /> */}
+            <Route path="/articles/post-article" element={<PostArticle />} />
           </Routes>
         </div>
       </userContext.Provider>

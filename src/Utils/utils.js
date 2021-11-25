@@ -73,3 +73,9 @@ export const postComment = (id, username, body) => {
       return err;
     });
 };
+
+export const voteOnComment = (id, vote) => {
+  return api.patch(`/comments/${id}`, { inc_votes: vote }).then((response) => {
+    return response.data.comment;
+  });
+};

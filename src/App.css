@@ -350,3 +350,7 @@ h1 {
   background-color: black;
   color: white;
 }
+
+.comment-vote-button {
+  margin-bottom: 20px;
+}

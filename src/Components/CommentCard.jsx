@@ -1,10 +1,11 @@
-import { deleteComment } from "../Utils/utils.js";
+import { deleteComment, voteOnComment } from "../Utils/utils.js";
 import { useContext, useState } from "react";
 import { userContext } from "../Contexts/user.js";
 
-export default function CommentCard({ comment, setComments }) {
+export default function CommentCard({ thisComment, setComments }) {
   const { user } = useContext(userContext);
   const [deleteClicked, setDeleteClicked] = useState(false);
+  const [comment, setComment] = useState(thisComment);
   return (
     <div className="comment-in-article">
       <p>
@@ -57,7 +58,30 @@ export default function CommentCard({ comment, setComments }) {
             Delete
           </button>
         )
-      ) : null}
+      ) : (
+        <div className="vote-button-div">
+          <button
+            className="vote-button comment-vote-button"
+            onClick={() => {
+              voteOnComment(comment.comment_id, 1).then((response) => {
+                setComment(response);
+              });
+            }}
+          >
+            +
+          </button>
+          <button
+            className="vote-button comment-vote-button"
+            onClick={() => {
+              voteOnComment(comment.comment_id, -1).then((response) => {
+                setComment(response);
+              });
+            }}
+          >
+            -
+          </button>
+        </div>
+      )}
     </div>
   );
 }

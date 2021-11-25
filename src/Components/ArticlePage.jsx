@@ -101,7 +101,10 @@ export default function ArticlePage() {
             <div className="comments-for-article">
               {comments.map((comment) => {
                 return (
-                  <CommentCard setComments={setComments} comment={comment} />
+                  <CommentCard
+                    setComments={setComments}
+                    thisComment={comment}
+                  />
                 );
               })}
             </div>

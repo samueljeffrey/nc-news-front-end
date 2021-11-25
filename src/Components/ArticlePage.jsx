@@ -18,7 +18,7 @@ export default function ArticlePage() {
   const [addClicked, setAddClicked] = useState(false);
   const [deleteClicked, setDeleteClicked] = useState(false);
   const [deleted, setDeleted] = useState(false);
-  const { user } = useContext(userContext);
+  const { user, setUser } = useContext(userContext);
 
   useEffect(() => {
     getSingleArticle(article_id).then((response) => {
@@ -28,6 +28,14 @@ export default function ArticlePage() {
       setComments(response);
     });
   }, []);
+  useEffect(() => {
+    getSingleArticle(article_id).then((response) => {
+      setArticle(response);
+    });
+    getComments(article_id).then((response) => {
+      setComments(response);
+    });
+  }, [comments]);
   if (!deleted && Object.keys(article).length > 0) {
     return (
       <main className="article-page">
@@ -134,8 +142,8 @@ export default function ArticlePage() {
           {addClicked ? (
             <PostComment
               article={article}
-              setComments={setComments}
               user={user}
+              setComments={setComments}
               setAddClicked={setAddClicked}
             />
           ) : null}

@@ -219,6 +219,50 @@ h1 {
   margin: 40px auto;
 }
 
+.delete-article-button {
+  margin: 0 0 10px;
+  padding: 4px 8px;
+  border: solid red 1px;
+  border-radius: 5px;
+  color: red;
+  background-color: white;
+}
+
+.delete-article-button:hover {
+  transition-duration: 0.25s;
+  background-color: red;
+  color: white;
+}
+
+.do-delete-article {
+  border: solid black 2px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 4px 8px;
+  margin: 0 10px 10px;
+  color: red;
+}
+
+.do-delete-article:hover {
+  transition-duration: 0.25s;
+  color: white;
+  background-color: red;
+}
+
+.dont-delete-article {
+  border: solid black 2px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 4px 8px;
+  margin: 0 10px 10px;
+}
+
+.dont-delete-article:hover {
+  transition-duration: 0.25s;
+  background-color: black;
+  color: white;
+}
+
 .vote-button {
   margin: 0 5px;
   width: 30px;

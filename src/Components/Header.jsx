@@ -11,7 +11,9 @@ export default function Header({ allTopics, topic, setTopic }) {
           <h1>NC News</h1>
         </Link>
         <Link className="react-link" to="/users">
-          <button id="user-button">{user.username} | switch user</button>
+          <button className="black-button" id="user-button">
+            {user.username} | switch user
+          </button>
         </Link>
         <Link className="react-link" to="/articles/post-article">
           <button id="post-article-button">New Article</button>

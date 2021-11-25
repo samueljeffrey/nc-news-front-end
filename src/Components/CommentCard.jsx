@@ -30,7 +30,7 @@ export default function CommentCard({ thisComment, setComments }) {
           <div>
             <h3>Delete comment?</h3>
             <button
-              className="do-delete-comment"
+              className="do-delete"
               onClick={() => {
                 deleteComment(comment.comment_id).then(() => {
                   setComments([]);
@@ -40,7 +40,7 @@ export default function CommentCard({ thisComment, setComments }) {
               Yes
             </button>
             <button
-              className="dont-delete-comment"
+              className="dont-delete"
               onClick={() => {
                 setDeleteClicked(false);
               }}
@@ -50,7 +50,7 @@ export default function CommentCard({ thisComment, setComments }) {
           </div>
         ) : (
           <button
-            className="delete-comment-button"
+            className="delete-button"
             onClick={() => {
               setDeleteClicked(true);
             }}

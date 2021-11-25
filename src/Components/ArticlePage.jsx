@@ -62,7 +62,7 @@ export default function ArticlePage() {
               <div>
                 <h3>Delete article?</h3>
                 <button
-                  className="do-delete-article"
+                  className="do-delete"
                   onClick={() => {
                     deleteArticle(article.article_id).then((response) => {
                       if (response === "done") {
@@ -76,7 +76,7 @@ export default function ArticlePage() {
                   Yes
                 </button>
                 <button
-                  className="dont-delete-article"
+                  className="dont-delete"
                   onClick={() => {
                     setDeleteClicked(false);
                   }}
@@ -86,7 +86,7 @@ export default function ArticlePage() {
               </div>
             ) : (
               <button
-                className="delete-article-button"
+                className="delete-button"
                 onClick={() => {
                   setDeleteClicked(true);
                 }}

@@ -9,10 +9,10 @@ export default function PostComment({
   return (
     <div id="add-comment-div">
       <h3>Write comment here:</h3>
-      <input type="text" id="new-comment" />
+      <textarea id="new-comment" className="input-box" />
       <p>
         <span
-          className="post-comment"
+          className="post-button"
           onClick={() => {
             if (document.getElementById("new-comment").value !== "") {
               postComment(
@@ -29,7 +29,7 @@ export default function PostComment({
           Post
         </span>
         <span
-          className="cancel-comment"
+          className="cancel-post-button"
           onClick={() => {
             setAddClicked(false);
           }}

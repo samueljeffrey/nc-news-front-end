@@ -13,19 +13,51 @@ button:hover {
   cursor: pointer;
 }
 
-h2 {
-  margin: 25px auto;
-}
-
-/* Header */
-
-h1 {
+.delete-button {
+  margin: 0 0 10px;
+  padding: 4px 8px;
+  border: solid red 1px;
+  border-radius: 5px;
   color: red;
-  font-size: 5em;
-  margin: 15px;
+  background-color: white;
 }
 
-#user-button {
+.delete-button:hover {
+  transition-duration: 0.25s;
+  background-color: red;
+  color: white;
+}
+
+.do-delete {
+  border: solid black 2px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 4px 8px;
+  margin: 0 10px 10px;
+  color: red;
+}
+
+.do-delete:hover {
+  transition-duration: 0.25s;
+  color: white;
+  background-color: red;
+}
+
+.dont-delete {
+  border: solid black 2px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 4px 8px;
+  margin: 0 10px 10px;
+}
+
+.dont-delete:hover {
+  transition-duration: 0.25s;
+  background-color: black;
+  color: white;
+}
+
+.black-button {
   padding: 8px 16px;
   background-color: black;
   color: white;
@@ -36,11 +68,72 @@ h1 {
   font-weight: 500;
 }
 
-#user-button:hover {
+.black-button:hover {
   transition-duration: 0.25s;
   background-color: white;
   color: black;
   border: 2px solid black;
+}
+
+.input-line {
+  width: 300px;
+  margin: auto;
+  border: black solid 2px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.input-box {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  border: black solid 2px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.post-button {
+  padding: 4px 8px;
+  margin: 5px;
+  border: solid green 1px;
+  border-radius: 5px;
+  color: green;
+  background-color: white;
+}
+
+.post-button:hover {
+  cursor: pointer;
+  transition-duration: 0.25s;
+  background-color: green;
+  color: white;
+}
+
+.cancel-post-button {
+  padding: 4px 8px;
+  margin: 5px;
+  border: solid black 1px;
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+}
+
+.cancel-post-button:hover {
+  cursor: pointer;
+  transition-duration: 0.25s;
+  background-color: black;
+  color: white;
+}
+
+h2 {
+  margin: 25px auto;
+}
+
+/* Header */
+
+h1 {
+  color: red;
+  font-size: 5em;
+  margin: 15px;
 }
 
 #post-article-button {
@@ -219,50 +312,6 @@ h1 {
   margin: 40px auto;
 }
 
-.delete-article-button {
-  margin: 0 0 10px;
-  padding: 4px 8px;
-  border: solid red 1px;
-  border-radius: 5px;
-  color: red;
-  background-color: white;
-}
-
-.delete-article-button:hover {
-  transition-duration: 0.25s;
-  background-color: red;
-  color: white;
-}
-
-.do-delete-article {
-  border: solid black 2px;
-  border-radius: 5px;
-  background-color: white;
-  padding: 4px 8px;
-  margin: 0 10px 10px;
-  color: red;
-}
-
-.do-delete-article:hover {
-  transition-duration: 0.25s;
-  color: white;
-  background-color: red;
-}
-
-.dont-delete-article {
-  border: solid black 2px;
-  background-color: white;
-  border-radius: 5px;
-  padding: 4px 8px;
-  margin: 0 10px 10px;
-}
-
-.dont-delete-article:hover {
-  transition-duration: 0.25s;
-  background-color: black;
-  color: white;
-}
-
 .vote-button {
   margin: 0 5px;
   width: 30px;
@@ -316,45 +365,6 @@ h1 {
 
 /* PostComment */
 
-#new-comment {
-  width: 300px;
-  margin: auto;
-  border: black solid 2px;
-  border-radius: 5px;
-}
-
-.post-comment {
-  padding: 4px 8px;
-  margin: 5px;
-  border: solid green 1px;
-  border-radius: 5px;
-  color: green;
-  background-color: white;
-}
-
-.post-comment:hover {
-  cursor: pointer;
-  transition-duration: 0.25s;
-  background-color: green;
-  color: white;
-}
-
-.cancel-comment {
-  padding: 4px 8px;
-  margin: 5px;
-  border: solid black 1px;
-  border-radius: 5px;
-  color: black;
-  background-color: white;
-}
-
-.cancel-comment:hover {
-  cursor: pointer;
-  transition-duration: 0.25s;
-  background-color: black;
-  color: white;
-}
-
 /* CommentCard */
 
 .comment-in-article {
@@ -369,50 +379,6 @@ h1 {
   text-align: left;
 }
 
-.delete-comment-button {
-  margin: 0 0 10px;
-  padding: 4px 8px;
-  border: solid red 1px;
-  border-radius: 5px;
-  color: red;
-  background-color: white;
-}
-
-.delete-comment-button:hover {
-  transition-duration: 0.25s;
-  background-color: red;
-  color: white;
-}
-
-.do-delete-comment {
-  border: solid black 2px;
-  border-radius: 5px;
-  background-color: white;
-  padding: 4px 8px;
-  margin: 0 10px 10px;
-  color: red;
-}
-
-.do-delete-comment:hover {
-  transition-duration: 0.25s;
-  color: white;
-  background-color: red;
-}
-
-.dont-delete-comment {
-  border: solid black 2px;
-  background-color: white;
-  border-radius: 5px;
-  padding: 4px 8px;
-  margin: 0 10px 10px;
-}
-
-.dont-delete-comment:hover {
-  transition-duration: 0.25s;
-  background-color: black;
-  color: white;
-}
-
 .comment-vote-button {
   margin-bottom: 20px;
 }
@@ -421,13 +387,6 @@ h1 {
 
 .article-field-labels {
   margin-bottom: 5px;
-}
-
-#new-article-title {
-  width: 300px;
-  margin: auto;
-  border: black solid 2px;
-  border-radius: 5px;
 }
 
 #new-article-topic {
@@ -440,46 +399,6 @@ h1 {
 #new-article-topic:hover {
   transition-duration: 0.25s;
   cursor: pointer;
-}
-
-#new-article-body {
-  width: 300px;
-  height: 300px;
-  margin: auto;
-  border: black solid 2px;
-  border-radius: 5px;
-}
-
-.post-article {
-  padding: 4px 8px;
-  margin: 5px;
-  border: solid green 1px;
-  border-radius: 5px;
-  color: green;
-  background-color: white;
-}
-
-.post-article:hover {
-  cursor: pointer;
-  transition-duration: 0.25s;
-  background-color: green;
-  color: white;
-}
-
-.cancel-article {
-  padding: 4px 8px;
-  margin: 5px;
-  border: solid black 1px;
-  border-radius: 5px;
-  color: black;
-  background-color: white;
-}
-
-.cancel-article:hover {
-  cursor: pointer;
-  transition-duration: 0.25s;
-  background-color: black;
-  color: white;
 }
 
 .do-post-article {
@@ -510,22 +429,4 @@ h1 {
   transition-duration: 0.25s;
   background-color: red;
   color: white;
-}
-
-#view-new-article-button {
-  padding: 8px 16px;
-  background-color: black;
-  color: white;
-  border-radius: 5px;
-  margin: 5px 5px 15px;
-  border: 2px solid black;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-#view-new-article-button:hover {
-  transition-duration: 0.25s;
-  background-color: white;
-  color: black;
-  border: 2px solid black;
 }

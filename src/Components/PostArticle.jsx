@@ -14,7 +14,7 @@ export default function PostArticle() {
       <div>
         <h2>Article posted!</h2>
         <Link className="react-link" to={`/articles/${newArticleId}`}>
-          <button id="view-new-article-button">Go to article</button>
+          <button className="black-button">Go to article</button>
         </Link>
       </div>
     );
@@ -25,7 +25,7 @@ export default function PostArticle() {
         <h3 className="article-field-labels" id="post-comment-title-label">
           Enter Title:
         </h3>
-        <input type="text" id="new-article-title" />
+        <input type="text" id="new-article-title" className="input-line" />
         <h3 className="article-field-labels" id="post-comment-topic-label">
           Choose Topic:
         </h3>
@@ -42,7 +42,7 @@ export default function PostArticle() {
         <h3 className="article-field-labels" id="post-comment-body-label">
           Write Article:
         </h3>
-        <textarea id="new-article-body" />
+        <textarea id="new-article-body" className="input-box" />
         {postClicked ? (
           <div>
             <h3>Post article?</h3>
@@ -76,7 +76,7 @@ export default function PostArticle() {
         ) : (
           <p>
             <span
-              className="post-article"
+              className="post-button"
               onClick={() => {
                 if (
                   document.getElementById("new-article-body").value !== "" &&
@@ -88,6 +88,9 @@ export default function PostArticle() {
             >
               Post
             </span>
+            <Link className="react-link" to="/">
+              <span className="cancel-post-button">Cancel</span>
+            </Link>
           </p>
         )}
       </main>

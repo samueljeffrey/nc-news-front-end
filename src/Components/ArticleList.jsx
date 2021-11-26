@@ -6,6 +6,12 @@ export default function ArticleList({ topic }) {
   const [articles, setArticles] = useState([]);
   const [sort, setSort] = useState("created_at");
   const [order, setOrder] = useState("ASC");
+
+  useEffect(() => {
+    setSort("created_at");
+    setOrder("DESC");
+    document.getElementById("article-list-select").value = "created_at DESC";
+  }, []);
   useEffect(() => {
     setSort("created_at");
     setOrder("DESC");

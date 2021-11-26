@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# My Northcoders News API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+This project has been to develop a front end app for a news website, with its functionality facilitated by my own backend API, which I built prior to this.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Try the React App
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### The hosted React App can be found [here](https://samuel-jeffrey-nc-news.netlify.app/).
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Check out the project for yourself
 
-### `npm run build`
+### 1. Clone the repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In your terminal, when in your chosen directory, run the following command:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```http
+git clone https://github.com/samueljeffrey/nc-news.git
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Once cloned, enter the new directory and open it in your editor, via the following commands in the terminal:
 
-### `npm run eject`
+```http
+cd nc-news
+code .
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Install dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+In order to install react, which enables you to run the project from a local server within your computer, type the following commands into your code editor's terminal:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```http
+npm install
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3. Try the app
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To run and use the app with all its functionality, from a local server, simply run the following command in your computer:
 
-### Code Splitting
+```http
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+A new window will open up and you can explore the app from there.
 
-### Analyzing the Bundle Size
+The app has the following functionality:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- The "switch user" button in the header will take you to an options page (the user is always "grumpy19" by default when loading up the app). When selecting an option, the change is immediately effective throughout the app.
+- The new article button in the header takes you to a dedicated page. This button is clickable regardless of which user is signed in and multiple articles can be created consecutively by the same user.
+- The "NC NEWS" title in the header, as well as the four topic choice buttons, will take you to the home page, regardless of where you are in the app, and the article list in that page will be approriately filtered.
+- The article list in the homepage can be sorted and ordered by date created, number of comments, vote count and author names alphabetically sorted. These four options are also available reversed.
+- When viewing an article, a user can upvote or downvote the article if the article was not written by them. When the signed-in user is viewing their own article, however, they can choose to delete it (there is a second step to this deletion process, to prevent accidents).
+- Every article page has a comment section at the bottom, and each comment within that section can be deleted, if it was posted by the signed-in user, or voted on, if another user wrote it.
+- Any user can add a new comment to an article, or several consecutive comments, regardless of whether they wrote the article or not.
+- If you type in a non-existent url for this app, you will see only the header and the statement "Page not found", although a request for an article with an ID which does not exist will see the message "Article not found" rendered.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Thanks for having a look at my React App

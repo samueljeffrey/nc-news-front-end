@@ -11,6 +11,8 @@ import PostArticle from "./Components/PostArticle.jsx";
 import ErrorPage from "./Components/ErrorPage.jsx";
 
 function App() {
+  const [sort, setSort] = useState("created_at");
+  const [order, setOrder] = useState("ASC");
   const [user, setUser] = useState({ username: "grumpy19" });
   const [topic, setTopic] = useState({
     slug: "all",
@@ -27,9 +29,26 @@ function App() {
     <BrowserRouter>
       <userContext.Provider value={{ user, setUser }}>
         <div className="App">
-          <Header topic={topic} setTopic={setTopic} allTopics={allTopics} />
+          <Header
+            topic={topic}
+            setTopic={setTopic}
+            allTopics={allTopics}
+            setSort={setSort}
+            setOrder={setOrder}
+          />
           <Routes>
-            <Route path="/" element={<ArticleList topic={topic} />} />
+            <Route
+              path="/"
+              element={
+                <ArticleList
+                  topic={topic}
+                  sort={sort}
+                  setSort={setSort}
+                  order={order}
+                  setOrder={setOrder}
+                />
+              }
+            />
             <Route path="/users" element={<ChooseUser />} />
             <Route path="/articles/:article_id" element={<ArticlePage />} />
             <Route path="/articles/post-article" element={<PostArticle />} />

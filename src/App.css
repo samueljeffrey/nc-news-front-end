@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   min-height: 100vh;
-  background-color: #fafafa;
+  background-color: #fffddd;
   color: #1a1a1a;
 }
 
@@ -21,19 +21,19 @@ button:hover {
   border: solid #ee0909 1px;
   border-radius: 5px;
   color: #ee0909;
-  background-color: #fafafa;
+  background-color: #fffddd;
 }
 
 .delete-button:hover {
   transition-duration: 0.25s;
   background-color: #ee0909;
-  color: #fafafa;
+  color: #fffddd;
 }
 
 .do-delete {
   border: solid #1a1a1a 2px;
   border-radius: 5px;
-  background-color: #fafafa;
+  background-color: #fffddd;
   padding: 4px 8px;
   margin: 0 10px 10px;
   color: #ee0909;
@@ -41,13 +41,13 @@ button:hover {
 
 .do-delete:hover {
   transition-duration: 0.25s;
-  color: #fafafa;
+  color: #fffddd;
   background-color: #ee0909;
 }
 
 .dont-delete {
   border: solid #1a1a1a 2px;
-  background-color: #fafafa;
+  background-color: #fffddd;
   border-radius: 5px;
   padding: 4px 8px;
   margin: 0 10px 10px;
@@ -56,13 +56,13 @@ button:hover {
 .dont-delete:hover {
   transition-duration: 0.25s;
   background-color: #1a1a1a;
-  color: #fafafa;
+  color: #fffddd;
 }
 
 .black-button {
   padding: 8px 16px;
   background-color: #1a1a1a;
-  color: #fafafa;
+  color: #fffddd;
   border-radius: 5px;
   margin: 5px 5px 15px;
   border: 2px solid #1a1a1a;
@@ -72,7 +72,7 @@ button:hover {
 
 .black-button:hover {
   transition-duration: 0.25s;
-  background-color: #fafafa;
+  background-color: #fffddd;
   color: #1a1a1a;
   border: 2px solid #1a1a1a;
 }
@@ -100,14 +100,14 @@ button:hover {
   border: solid #28ad3e 1px;
   border-radius: 5px;
   color: #28ad3e;
-  background-color: #fafafa;
+  background-color: #fffddd;
 }
 
 .post-button:hover {
   cursor: pointer;
   transition-duration: 0.25s;
   background-color: #28ad3e;
-  color: #fafafa;
+  color: #fffddd;
 }
 
 .cancel-post-button {
@@ -116,14 +116,14 @@ button:hover {
   border: solid #1a1a1a 1px;
   border-radius: 5px;
   color: #1a1a1a;
-  background-color: #fafafa;
+  background-color: #fffddd;
 }
 
 .cancel-post-button:hover {
   cursor: pointer;
   transition-duration: 0.25s;
   background-color: #1a1a1a;
-  color: #fafafa;
+  color: #fffddd;
 }
 
 h2 {
@@ -146,7 +146,7 @@ header {
 }
 
 h1 {
-  color: #ee0909;
+  color: #0266d8;
   font-size: 5em;
   margin: 10px;
 }
@@ -154,7 +154,7 @@ h1 {
 #post-article-button {
   padding: 8px 16px;
   background-color: #28ad3e;
-  color: #fafafa;
+  color: #fffddd;
   border-radius: 5px;
   margin: 5px 5px 15px;
   border: 2px solid #1a1a1a;
@@ -164,7 +164,7 @@ h1 {
 
 #post-article-button:hover {
   transition-duration: 0.25s;
-  background-color: #fafafa;
+  background-color: #fffddd;
   color: #28ad3e;
   border: 2px solid #1a1a1a;
 }
@@ -173,7 +173,7 @@ h1 {
   padding: 5px 10px;
   min-width: 100px;
   background-color: #ee0909;
-  color: #fafafa;
+  color: #fffddd;
   border: #1a1a1a solid 2px;
   border-radius: 5px;
   margin: 10px 20px;
@@ -183,14 +183,14 @@ h1 {
 
 .header-topic-button:hover {
   transition-duration: 0.25s;
-  background-color: #fafafa;
+  background-color: #fffddd;
   color: #ee0909;
 }
 
 /* ArticleList */
 
 #article-list-select {
-  background-color: #fafafa;
+  background-color: #fffddd;
   padding: 5px;
   font-size: 1.2rem;
   border-radius: 5px;
@@ -337,20 +337,20 @@ h1 {
   border: solid #1a1a1a 1px;
   border-radius: 5px;
   font-size: 1.25rem;
-  color: #fafafa;
+  color: #fffddd;
   background-color: #1a1a1a;
 }
 
 .vote-button:hover {
   transition-duration: 0.25s;
-  background-color: #fafafa;
+  background-color: #fffddd;
   color: #1a1a1a;
 }
 
 .comment-on-article {
   border-radius: 5px;
   background-color: #1a1a1a;
-  color: #fafafa;
+  color: #fffddd;
   border: solid 1px #1a1a1a;
   padding: 5px;
   width: 160px;
@@ -360,7 +360,7 @@ h1 {
 .comment-on-article:hover {
   transition-duration: 0.25s;
   cursor: pointer;
-  background-color: #fafafa;
+  background-color: #fffddd;
   color: #1a1a1a;
   padding: 5px;
   width: 160px;
@@ -378,7 +378,7 @@ h1 {
   transition-duration: 0.25s;
   cursor: pointer;
   background-color: #1a1a1a;
-  color: #fafafa;
+  color: #fffddd;
 }
 
 /* PostComment */
@@ -407,7 +407,7 @@ h1 {
 }
 
 #new-article-topic {
-  background-color: #fafafa;
+  background-color: #fffddd;
   padding: 2px;
   border-radius: 5px;
   border: 2px #1a1a1a solid;
@@ -421,7 +421,7 @@ h1 {
 .do-post-article {
   border: solid #1a1a1a 2px;
   border-radius: 5px;
-  background-color: #fafafa;
+  background-color: #fffddd;
   padding: 4px 8px;
   margin: 0 10px 10px;
   color: #28ad3e;
@@ -429,13 +429,13 @@ h1 {
 
 .do-post-article:hover {
   transition-duration: 0.25s;
-  color: #fafafa;
+  color: #fffddd;
   background-color: #28ad3e;
 }
 
 .dont-post-article {
   border: solid #1a1a1a 2px;
-  background-color: #fafafa;
+  background-color: #fffddd;
   border-radius: 5px;
   padding: 4px 8px;
   margin: 0 10px 10px;
@@ -445,5 +445,5 @@ h1 {
 .dont-post-article:hover {
   transition-duration: 0.25s;
   background-color: #ee0909;
-  color: #fafafa;
+  color: #fffddd;
 }

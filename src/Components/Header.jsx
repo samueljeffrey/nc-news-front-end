@@ -2,12 +2,23 @@ import { useContext } from "react";
 import { userContext } from "../Contexts/user.js";
 import { Link } from "react-router-dom";
 
-export default function Header({ allTopics, topic, setTopic }) {
+export default function Header({ allTopics, setTopic, setSort, setOrder }) {
   const { user } = useContext(userContext);
   return (
     <header>
       <div id="title-and-user-div">
-        <Link className="react-link" to="/">
+        <Link
+          className="react-link"
+          to="/"
+          onClick={() => {
+            setTopic({
+              slug: "all",
+              description: "articles from all topics",
+            });
+            setSort("created_at");
+            setOrder("DESC");
+          }}
+        >
           <h1>NC News</h1>
         </Link>
         <Link className="react-link" to="/users">
@@ -29,6 +40,8 @@ export default function Header({ allTopics, topic, setTopic }) {
                 slug: "all",
                 description: "articles from all topics",
               });
+              setSort("created_at");
+              setOrder("DESC");
             }}
           >
             All
@@ -42,6 +55,8 @@ export default function Header({ allTopics, topic, setTopic }) {
                 key={singleTopic.slug}
                 onClick={() => {
                   setTopic(singleTopic);
+                  setSort("created_at");
+                  setOrder("DESC");
                 }}
               >
                 {singleTopic.slug.slice(0, 1).toUpperCase() +

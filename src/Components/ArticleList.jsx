@@ -2,10 +2,8 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getArticles } from "../Utils/utils.js";
 
-export default function ArticleList({ topic }) {
+export default function ArticleList({ topic, sort, setSort, order, setOrder }) {
   const [articles, setArticles] = useState([]);
-  const [sort, setSort] = useState("created_at");
-  const [order, setOrder] = useState("ASC");
 
   useEffect(() => {
     setSort("created_at");

@@ -1,8 +1,8 @@
 .App {
   text-align: center;
   min-height: 100vh;
-  background-color: #fffddd;
-  color: #1a1a1a;
+  background-color: #1a1a1a;
+  color: #fffddd;
 }
 
 .react-link {
@@ -16,38 +16,39 @@ button:hover {
 }
 
 .delete-button {
-  margin: 0 0 10px;
+  margin: 0 0 15px;
   padding: 4px 8px;
-  border: solid #ee0909 1px;
+  border: solid #fffddd 1px;
   border-radius: 5px;
-  color: #ee0909;
-  background-color: #fffddd;
+  color: #fffddd;
+  background-color: #ee0909;
 }
 
 .delete-button:hover {
   transition-duration: 0.25s;
-  background-color: #ee0909;
-  color: #fffddd;
+  background-color: #fffddd;
+  color: #ee0909;
 }
 
 .do-delete {
-  border: solid #1a1a1a 2px;
+  border: solid #fffddd 2px;
   border-radius: 5px;
-  background-color: #fffddd;
+  background-color: #ee0909;
   padding: 4px 8px;
   margin: 0 10px 10px;
-  color: #ee0909;
+  color: #fffddd;
 }
 
 .do-delete:hover {
   transition-duration: 0.25s;
-  color: #fffddd;
-  background-color: #ee0909;
+  color: #ee0909;
+  background-color: #fffddd;
 }
 
 .dont-delete {
-  border: solid #1a1a1a 2px;
-  background-color: #fffddd;
+  border: solid #fffddd 2px;
+  background-color: #28a60f;
+  color: #fffddd;
   border-radius: 5px;
   padding: 4px 8px;
   margin: 0 10px 10px;
@@ -55,75 +56,78 @@ button:hover {
 
 .dont-delete:hover {
   transition-duration: 0.25s;
-  background-color: #1a1a1a;
-  color: #fffddd;
+  background-color: #fffddd;
+  color: #28a60f;
 }
 
 .black-button {
   padding: 8px 16px;
-  background-color: #1a1a1a;
-  color: #fffddd;
+  background-color: #fffddd;
+  color: #1a1a1a;
   border-radius: 5px;
   margin: 5px 5px 15px;
-  border: 2px solid #1a1a1a;
+  border: 2px solid #fffddd;
   font-size: 1rem;
   font-weight: 500;
 }
 
 .black-button:hover {
   transition-duration: 0.25s;
-  background-color: #fffddd;
-  color: #1a1a1a;
-  border: 2px solid #1a1a1a;
+  background-color: #1a1a1a;
+  color: #fffddd;
 }
 
 .input-line {
   width: 280px;
   margin: auto;
-  border: #1a1a1a solid 2px;
+  border: #fffddd solid 2px;
   border-radius: 5px;
   font-size: 1rem;
+  color: #fffddd;
+  background-color: #1a1a1a;
 }
 
 .input-box {
   width: 280px;
   height: 280px;
   margin: auto;
-  border: #1a1a1a solid 2px;
+  border: #fffddd solid 2px;
   border-radius: 5px;
   font-size: 1rem;
+  color: #fffddd;
+  background-color: #1a1a1a;
 }
 
 .post-button {
   padding: 4px 8px;
   margin: 5px;
-  border: solid #28ad3e 1px;
+  border: solid #fffddd 1px;
   border-radius: 5px;
-  color: #28ad3e;
-  background-color: #fffddd;
+  background-color: #28a60f;
+  color: #fffddd;
 }
 
 .post-button:hover {
   cursor: pointer;
   transition-duration: 0.25s;
-  background-color: #28ad3e;
-  color: #fffddd;
+  color: #1a1a1a;
+  background-color: #fffddd;
 }
 
 .cancel-post-button {
   padding: 4px 8px;
   margin: 5px;
-  border: solid #1a1a1a 1px;
+  border: solid #fffddd 1px;
   border-radius: 5px;
-  color: #1a1a1a;
-  background-color: #fffddd;
+  color: #fffddd;
+  background-color: #1a1a1a;
 }
 
 .cancel-post-button:hover {
   cursor: pointer;
   transition-duration: 0.25s;
-  background-color: #1a1a1a;
-  color: #fffddd;
+  background-color: #fffddd;
+  color: #1a1a1a;
 }
 
 h2 {
@@ -131,14 +135,14 @@ h2 {
 }
 
 .error-paragraph {
-  color: #ee0909;
+  color: yellow;
 }
 
 /* Header */
 
 #header-bottom-line {
   width: 50vw;
-  border-bottom: 1px solid #1a1a1a;
+  border-bottom: 1px solid #fffddd;
 }
 
 header {
@@ -146,18 +150,18 @@ header {
 }
 
 h1 {
-  color: #0266d8;
+  color: yellow;
   font-size: 5em;
   margin: 10px;
 }
 
 #post-article-button {
   padding: 8px 16px;
-  background-color: #28ad3e;
+  background-color: #28a60f;
   color: #fffddd;
   border-radius: 5px;
   margin: 5px 5px 15px;
-  border: 2px solid #1a1a1a;
+  border: 2px solid #fffddd;
   font-size: 1rem;
   font-weight: 500;
 }
@@ -165,15 +169,15 @@ h1 {
 #post-article-button:hover {
   transition-duration: 0.25s;
   background-color: #fffddd;
-  color: #28ad3e;
-  border: 2px solid #1a1a1a;
+  color: #28a60f;
+  border: 2px solid #fffddd;
 }
 
 .header-topic-button {
   padding: 5px 10px;
   min-width: 100px;
-  background-color: #ee0909;
-  color: #fffddd;
+  background-color: yellow;
+  color: #1a1a1a;
   border: #1a1a1a solid 2px;
   border-radius: 5px;
   margin: 10px 20px;
@@ -183,27 +187,29 @@ h1 {
 
 .header-topic-button:hover {
   transition-duration: 0.25s;
-  background-color: #fffddd;
-  color: #ee0909;
+  background-color: #1a1a1a;
+  border: yellow solid 2px;
+  color: yellow;
 }
 
 /* ArticleList */
 
 #article-list-select {
-  background-color: #fffddd;
+  background-color: #1a1a1a;
   padding: 5px;
   font-size: 1.2rem;
   border-radius: 5px;
-  border: 2px #1a1a1a solid;
+  color: #fffddd;
+  border: 2px #fffddd solid;
 }
 
 #article-list-select:hover {
-  transition-duration: 0.25s;
   cursor: pointer;
 }
 
 #article-list {
-  width: 90vw;
+  max-width: 1500px;
+  min-width: 300px;
   margin: 10px auto;
   display: flex;
   flex-wrap: wrap;
@@ -215,17 +221,18 @@ h1 {
 }
 
 .article-card {
-  border: #ee0909 4px solid;
+  border: yellow 4px solid;
   border-radius: 10px;
   max-width: 360px;
   min-height: 180px;
   margin: 20px;
   padding: 10px;
+  color: #fffddd;
 }
 
 .article-card:hover {
   transition-duration: 0.25s;
-  border: #1a1a1a 4px solid;
+  border: #28a60f 4px solid;
   cursor: pointer;
 }
 
@@ -240,7 +247,7 @@ h1 {
 }
 
 .positive-votes {
-  color: #28ad3e;
+  color: #28a60f;
 }
 
 .negative-votes {
@@ -261,7 +268,8 @@ h1 {
 
 .user-card-div {
   font-size: 2rem;
-  min-width: 280px;
+  width: 250px;
+  height: 250px;
   padding: 16px;
   border-radius: 10px;
   border: solid #1a1a1a 8px;
@@ -270,19 +278,19 @@ h1 {
 
 .user-card-div:hover {
   transition-duration: 0.25s;
-  border: solid 8px #ee0909;
+  border: solid 8px yellow;
   padding: 16px;
   cursor: pointer;
 }
 
 .current-user {
   padding: 16px;
-  border: solid 8px #28ad3e;
+  border: solid 8px #28a60f;
 }
 
 .current-user:hover {
   padding: 16px;
-  border: solid 8px #28ad3e;
+  border: solid 8px #28a60f;
 }
 
 .img-user-card {
@@ -305,7 +313,7 @@ h1 {
   max-width: 1000px;
   min-width: 300px;
   border-radius: 20px;
-  border: 2px #ee0909 solid;
+  border: 2px yellow solid;
   margin: 20px auto;
   padding: 20px 0 40px;
 }
@@ -326,7 +334,7 @@ h1 {
 
 .line-before-comments {
   width: 20vw;
-  border: 1px #1a1a1a solid;
+  border: 1px #fffddd solid;
   margin: 40px auto;
 }
 
@@ -334,7 +342,7 @@ h1 {
   margin: 0 5px;
   width: 30px;
   height: 30px;
-  border: solid #1a1a1a 1px;
+  border: solid #fffddd 1px;
   border-radius: 5px;
   font-size: 1.25rem;
   color: #fffddd;
@@ -349,29 +357,29 @@ h1 {
 
 .comment-on-article {
   border-radius: 5px;
-  background-color: #1a1a1a;
+  background-color: #28a60f;
   color: #fffddd;
-  border: solid 1px #1a1a1a;
+  border: solid 1px #fffddd;
   padding: 5px;
   width: 160px;
-  margin: 0 auto 10px;
+  margin: 20px auto;
 }
 
 .comment-on-article:hover {
   transition-duration: 0.25s;
   cursor: pointer;
   background-color: #fffddd;
-  color: #1a1a1a;
-  padding: 5px;
-  width: 160px;
+  color: #28a60f;
 }
 
 .comments-statement {
-  border: #1a1a1a 1px solid;
   border-radius: 5px;
+  background-color: #fffddd;
+  color: #1a1a1a;
+  border: solid 1px #fffddd;
   padding: 5px;
   width: 160px;
-  margin: 20px auto 0;
+  margin: 20px auto;
 }
 
 .comments-statement:hover {
@@ -381,13 +389,11 @@ h1 {
   color: #fffddd;
 }
 
-/* PostComment */
-
 /* CommentCard */
 
 .comment-in-article {
-  margin: 20px;
-  border: #1a1a1a 1px solid;
+  margin: 50px 25px;
+  border: #fffddd 1px solid;
   border-radius: 10px;
 }
 
@@ -419,31 +425,31 @@ h1 {
 }
 
 .do-post-article {
-  border: solid #1a1a1a 2px;
+  border: solid #fffddd 2px;
   border-radius: 5px;
-  background-color: #fffddd;
+  background-color: #28a60f;
   padding: 4px 8px;
   margin: 0 10px 10px;
-  color: #28ad3e;
+  color: #fffddd;
 }
 
 .do-post-article:hover {
   transition-duration: 0.25s;
-  color: #fffddd;
-  background-color: #28ad3e;
+  color: #28a60f;
+  background-color: #fffddd;
 }
 
 .dont-post-article {
-  border: solid #1a1a1a 2px;
-  background-color: #fffddd;
+  border: solid #fffddd 2px;
+  background-color: #ee0909;
   border-radius: 5px;
   padding: 4px 8px;
   margin: 0 10px 10px;
-  color: #ee0909;
+  color: #fffddd;
 }
 
 .dont-post-article:hover {
   transition-duration: 0.25s;
-  background-color: #ee0909;
-  color: #fffddd;
+  background-color: #fffddd;
+  color: #ee0909;
 }

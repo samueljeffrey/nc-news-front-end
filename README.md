@@ -57,7 +57,7 @@ The app has the following functionality:
 
 - The "switch user" button in the header will take you to an options page (the user is always "grumpy19" by default when loading up the app). When selecting an option, the change is immediately effective throughout the app.
 - The new article button in the header takes you to a dedicated page. This button is clickable regardless of which user is signed in and multiple articles can be created consecutively by the same user.
-- The "NC NEWS" title in the header, as well as the four topic choice buttons, will take you to the home page, regardless of where you are in the app, and the article list in that page will be approriately filtered.
+- The "NC NEWS" title in the header, as well as the four topic choice buttons, will take you to the home page, regardless of where you are in the app, and the article list in that page will be appropriately filtered.
 - The article list in the homepage can be sorted and ordered by date created, number of comments, vote count and author names alphabetically sorted. These four options are also available reversed.
 - When viewing an article, a user can upvote or downvote the article if the article was not written by them. When the signed-in user is viewing their own article, however, they can choose to delete it (there is a second step to this deletion process, to prevent accidents).
 - Every article page has a comment section at the bottom, and each comment within that section can be deleted, if it was posted by the signed-in user, or voted on, if another user wrote it.

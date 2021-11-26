@@ -51,6 +51,7 @@ export default function Header({ allTopics, topic, setTopic }) {
           );
         })}
       </div>
+      <hr id="header-bottom-line" />
     </header>
   );
 }

@@ -134,6 +134,11 @@ h2 {
 
 /* Header */
 
+#header-bottom-line {
+  width: 50vw;
+  border-bottom: 1px solid black;
+}
+
 h1 {
   color: red;
   font-size: 5em;
@@ -165,7 +170,7 @@ h1 {
   color: white;
   border: black solid 2px;
   border-radius: 5px;
-  margin: 20px 10px;
+  margin: 25px;
   font-size: 1rem;
   font-weight: 500;
 }
@@ -295,7 +300,7 @@ h1 {
   border-radius: 20px;
   border: 2px red solid;
   margin: 20px auto;
-  padding: 20px 30px 40px;
+  padding: 20px 0 40px;
 }
 
 .article-page-title {
@@ -304,6 +309,7 @@ h1 {
 }
 
 .article-body {
+  max-width: 940px;
   margin: 40px auto;
   font-size: 1.25rem;
   padding: 0 40px;

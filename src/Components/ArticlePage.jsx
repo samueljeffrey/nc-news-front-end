@@ -18,12 +18,17 @@ export default function ArticlePage() {
   const [addClicked, setAddClicked] = useState(false);
   const [deleteClicked, setDeleteClicked] = useState(false);
   const [deleted, setDeleted] = useState(false);
-  const { user, setUser } = useContext(userContext);
+  const [error, setError] = useState(false);
+  const { user } = useContext(userContext);
 
   useEffect(() => {
-    getSingleArticle(article_id).then((response) => {
-      setArticle(response);
-    });
+    getSingleArticle(article_id)
+      .then((response) => {
+        setArticle(response);
+      })
+      .catch(() => {
+        setError(true);
+      });
     getComments(article_id).then((response) => {
       setComments(response);
     });
@@ -36,7 +41,13 @@ export default function ArticlePage() {
       setComments(response);
     });
   }, [comments]);
-  if (!deleted && Object.keys(article).length > 0) {
+  if (error) {
+    return <h2>Article not found</h2>;
+  } else if (deleted) {
+    return <h2>Article deleted!</h2>;
+  } else if (Object.keys(article).length === 0) {
+    return <h2>Loading...</h2>;
+  } else {
     return (
       <main className="article-page">
         <div className="article-page-main">
@@ -164,7 +175,5 @@ export default function ArticlePage() {
         </div>
       </main>
     );
-  } else {
-    return <h2>Article deleted</h2>;
   }
 }

@@ -8,6 +8,7 @@ import ArticleList from "./Components/ArticleList.jsx";
 import ArticlePage from "./Components/ArticlePage.jsx";
 import ChooseUser from "./Components/ChooseUser.jsx";
 import PostArticle from "./Components/PostArticle.jsx";
+import ErrorPage from "./Components/ErrorPage.jsx";
 
 function App() {
   const [user, setUser] = useState({ username: "grumpy19" });
@@ -32,6 +33,7 @@ function App() {
             <Route path="/users" element={<ChooseUser />} />
             <Route path="/articles/:article_id" element={<ArticlePage />} />
             <Route path="/articles/post-article" element={<PostArticle />} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>
       </userContext.Provider>

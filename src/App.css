@@ -139,10 +139,14 @@ h2 {
   border-bottom: 1px solid black;
 }
 
+header {
+  padding: 10px 0 5px;
+}
+
 h1 {
   color: red;
   font-size: 5em;
-  margin: 15px;
+  margin: 10px;
 }
 
 #post-article-button {
@@ -380,8 +384,7 @@ h1 {
 /* CommentCard */
 
 .comment-in-article {
-  max-width: 600px;
-  margin: 25px auto;
+  margin: 20px;
   border: black 1px solid;
   border-radius: 10px;
 }

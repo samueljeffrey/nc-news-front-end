@@ -60,7 +60,7 @@ button:hover {
   color: #28a60f;
 }
 
-.black-button {
+.light-button {
   padding: 8px 16px;
   background-color: #ffffff;
   color: #1a1a1a;
@@ -71,7 +71,7 @@ button:hover {
   font-weight: 500;
 }
 
-.black-button:hover {
+.light-button:hover {
   transition-duration: 0.25s;
   background-color: #1a1a1a;
   color: #ffffff;

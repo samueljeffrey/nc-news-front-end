@@ -17,7 +17,7 @@ export default function PostArticle() {
       <div>
         <h2>Article posted!</h2>
         <Link className="react-link" to={`/articles/${newArticleId}`}>
-          <button className="black-button">Go to article</button>
+          <button className="light-button">Go to article</button>
         </Link>
       </div>
     );

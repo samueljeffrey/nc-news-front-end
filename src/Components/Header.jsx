@@ -22,7 +22,7 @@ export default function Header({ allTopics, setTopic, setSort, setOrder }) {
           <h1>NC News</h1>
         </Link>
         <Link className="react-link" to="/users">
-          <button className="black-button" id="user-button">
+          <button className="light-button" id="user-button">
             {user.username} | switch user
           </button>
         </Link>

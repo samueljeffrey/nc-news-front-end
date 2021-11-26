@@ -32,14 +32,9 @@ export default function PostArticle() {
           <p className="error-paragraph">Title cannot be empty</p>
         ) : null}
         {postClicked ? (
-          <input
-            type="text"
-            id="new-article-title"
-            className="input-line"
-            disabled
-          />
+          <textarea id="new-article-title" className="input-line" disabled />
         ) : (
-          <input type="text" id="new-article-title" className="input-line" />
+          <textarea id="new-article-title" className="input-line" />
         )}
         <h3 className="article-field-labels" id="post-comment-topic-label">
           Choose Topic:

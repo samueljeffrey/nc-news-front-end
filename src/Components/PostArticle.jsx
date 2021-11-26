@@ -9,6 +9,9 @@ export default function PostArticle() {
   const [postClicked, setPostClicked] = useState(false);
   const [posted, setPosted] = useState(false);
   const [newArticleId, setNewArticleId] = useState(false);
+  const [titleError, setTitleError] = useState(false);
+  const [bodyError, setBodyError] = useState(false);
+
   if (posted) {
     return (
       <div>
@@ -25,7 +28,19 @@ export default function PostArticle() {
         <h3 className="article-field-labels" id="post-comment-title-label">
           Enter Title:
         </h3>
-        <input type="text" id="new-article-title" className="input-line" />
+        {titleError ? (
+          <p className="error-paragraph">Title cannot be empty</p>
+        ) : null}
+        {postClicked ? (
+          <input
+            type="text"
+            id="new-article-title"
+            className="input-line"
+            disabled
+          />
+        ) : (
+          <input type="text" id="new-article-title" className="input-line" />
+        )}
         <h3 className="article-field-labels" id="post-comment-topic-label">
           Choose Topic:
         </h3>
@@ -42,7 +57,14 @@ export default function PostArticle() {
         <h3 className="article-field-labels" id="post-comment-body-label">
           Write Article:
         </h3>
-        <textarea id="new-article-body" className="input-box" />
+        {bodyError ? (
+          <p className="error-paragraph">Article cannot be empty</p>
+        ) : null}
+        {postClicked ? (
+          <textarea id="new-article-body" className="input-box" disabled />
+        ) : (
+          <textarea id="new-article-body" className="input-box" />
+        )}
         {postClicked ? (
           <div>
             <h3>Post article?</h3>
@@ -83,6 +105,21 @@ export default function PostArticle() {
                   document.getElementById("new-article-title").value !== ""
                 ) {
                   setPostClicked(true);
+                  setTitleError(false);
+                  setBodyError(false);
+                } else if (
+                  document.getElementById("new-article-body").value !== ""
+                ) {
+                  setTitleError(true);
+                  setBodyError(false);
+                } else if (
+                  document.getElementById("new-article-title").value !== ""
+                ) {
+                  setTitleError(false);
+                  setBodyError(true);
+                } else {
+                  setBodyError(true);
+                  setTitleError(true);
                 }
               }}
             >

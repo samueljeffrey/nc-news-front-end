@@ -8,14 +8,12 @@ export default function ArticleList({ topic, sort, setSort, order, setOrder }) {
   useEffect(() => {
     setSort("created_at");
     setOrder("DESC");
-    if (document.getElementById("article-list-select"))
-      document.getElementById("article-list-select").value = "created_at DESC";
+    document.getElementById("article-list-select").value = "created_at DESC";
   }, []);
   useEffect(() => {
     setSort("created_at");
     setOrder("DESC");
-    if (document.getElementById("article-list-select"))
-      document.getElementById("article-list-select").value = "created_at DESC";
+    document.getElementById("article-list-select").value = "created_at DESC";
   }, [topic]);
   useEffect(() => {
     getArticles(topic.slug, sort, order).then((response) => {

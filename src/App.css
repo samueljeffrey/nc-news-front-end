@@ -209,7 +209,7 @@ h1 {
 }
 
 #article-list {
-  max-width: 1500px;
+  max-width: 1350px;
   min-width: 300px;
   margin: 10px auto;
   display: flex;
@@ -224,7 +224,7 @@ h1 {
 .article-card {
   border: #ffcc00 4px solid;
   border-radius: 10px;
-  max-width: 360px;
+  width: 300px;
   min-height: 180px;
   margin: 20px;
   padding: 10px;

@@ -269,9 +269,9 @@ h1 {
 
 .user-card-div {
   font-size: 2rem;
-  width: 250px;
-  height: 250px;
-  padding: 16px;
+  min-width: 275px;
+  height: 275px;
+  padding: 25px;
   border-radius: 10px;
   border: solid #ffffff 8px;
   margin: 25px;

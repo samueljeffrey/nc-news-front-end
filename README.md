@@ -10,7 +10,9 @@ This project has been to develop a front end app for a news website, with its fu
 
 ## Try the React App
 
-#### The hosted React App can be found [here](https://samuel-jeffrey-nc-news.netlify.app/).
+#### The hosted React App can be found here: https://samuel-jeffrey-nc-news.netlify.app/.
+
+#### The API which I created and used for this project is found here: https://samueljeffrey-nc-news.herokuapp.com/api.
 
 ---
 
@@ -35,7 +37,7 @@ code .
 
 ### 2. Install dependencies
 
-In order to install react, which enables you to run the project from a local server within your computer, type the following commands into your code editor's terminal:
+You'll first need to make sure that your code editor has a minimum of Node version v16.0.0 installed. In order to install react, which enables you to run the project from a local server within your computer, type the following commands into your code editor's terminal:
 
 ```http
 npm install

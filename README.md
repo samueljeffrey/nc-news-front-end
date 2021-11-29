@@ -12,7 +12,7 @@ This project has been to develop a front end app for a news website, with its fu
 
 #### The hosted React App can be found here: https://samuel-jeffrey-nc-news.netlify.app/.
 
-#### The API which I created and used for this project is found here: https://samueljeffrey-nc-news.herokuapp.com/api.
+#### The API which I created and used for this project is found here: https://samueljeffrey-nc-news.herokuapp.com/api. Its Github repository can be found here: https://github.com/samueljeffrey/samueljeffrey-nc-news.
 
 ---
 

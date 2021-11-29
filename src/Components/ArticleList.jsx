@@ -4,31 +4,23 @@ import { getArticles } from "../Utils/utils.js";
 
 export default function ArticleList({ topic, sort, setSort, order, setOrder }) {
   const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setLoading(true);
     setSort("created_at");
     setOrder("DESC");
     if (document.getElementById("article-list-select"))
       document.getElementById("article-list-select").value = "created_at DESC";
-    setLoading(false);
   }, []);
   useEffect(() => {
-    setLoading(true);
     setSort("created_at");
     setOrder("DESC");
     if (document.getElementById("article-list-select"))
       document.getElementById("article-list-select").value = "created_at DESC";
-    setLoading(false);
   }, [topic]);
   useEffect(() => {
-    setLoading(true);
     getArticles(topic.slug, sort, order).then((response) => {
       setArticles(response);
     });
-    setLoading(false);
   }, [topic, sort, order]);
-  if (loading) return <h2>Loading...</h2>;
   return (
     <main>
       <h2 id="article-list-title">{topic.slug} articles:</h2>

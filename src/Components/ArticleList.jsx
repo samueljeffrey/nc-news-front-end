@@ -9,14 +9,16 @@ export default function ArticleList({ topic, sort, setSort, order, setOrder }) {
     setLoading(true);
     setSort("created_at");
     setOrder("DESC");
-    document.getElementById("article-list-select").value = "created_at DESC";
+    if (document.getElementById("article-list-select"))
+      document.getElementById("article-list-select").value = "created_at DESC";
     setLoading(false);
   }, []);
   useEffect(() => {
     setLoading(true);
     setSort("created_at");
     setOrder("DESC");
-    document.getElementById("article-list-select").value = "created_at DESC";
+    if (document.getElementById("article-list-select"))
+      document.getElementById("article-list-select").value = "created_at DESC";
     setLoading(false);
   }, [topic]);
   useEffect(() => {

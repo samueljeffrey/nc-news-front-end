@@ -99,6 +99,10 @@ button:hover {
   background-color: #1a1a1a;
 }
 
+.disabled-textarea {
+  background-color: #3a3a3a;
+}
+
 .post-button {
   padding: 4px 8px;
   margin: 5px;
@@ -280,17 +284,17 @@ h1 {
 .user-card-div:hover {
   transition-duration: 0.25s;
   border: solid 8px #ffcc00;
-  padding: 16px;
+  padding: 25px;
   cursor: pointer;
 }
 
 .current-user {
-  padding: 16px;
+  padding: 25px;
   border: solid 8px #28a60f;
 }
 
 .current-user:hover {
-  padding: 16px;
+  padding: 25px;
   border: solid 8px #28a60f;
 }
 

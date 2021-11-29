@@ -32,7 +32,11 @@ export default function PostArticle() {
           <p className="error-paragraph">Title cannot be empty</p>
         ) : null}
         {postClicked ? (
-          <textarea id="new-article-title" className="input-line" disabled />
+          <textarea
+            id="new-article-title"
+            className="input-line disabled-textarea"
+            disabled
+          />
         ) : (
           <textarea id="new-article-title" className="input-line" />
         )}
@@ -56,7 +60,11 @@ export default function PostArticle() {
           <p className="error-paragraph">Article cannot be empty</p>
         ) : null}
         {postClicked ? (
-          <textarea id="new-article-body" className="input-box" disabled />
+          <textarea
+            id="new-article-body"
+            className="input-box disabled-textarea"
+            disabled
+          />
         ) : (
           <textarea id="new-article-body" className="input-box" />
         )}

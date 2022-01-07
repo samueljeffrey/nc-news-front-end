@@ -1,4 +1,4 @@
-# My Northcoders News API
+# My Northcoders News React App
 
 ---
 
